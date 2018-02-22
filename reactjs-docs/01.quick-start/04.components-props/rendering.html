@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- we also recommend wrapping it in parentheses to avoid the pitfalls of automatic semicolon insertion. -->
+    <script type="text/babel">
+      //Always start component names with a capital letter.
+      function Welcome(props) {
+        return <h1>Hello, {props.name}</h1>;
+      }      
+
+      //elements can also represent user-defined components:
+      //const element = <Welcome name="Nikesh" />;
+      
+      function App() {
+        return (
+          <div>
+            <Welcome name="Nikesh" />
+            <Welcome name="Pradeep" />
+            <Welcome name="Swati" />
+          </div>
+        );
+      }
+
+
+      ReactDOM.render(
+        //element,
+        <App />,
+        document.getElementById('root')
+      );
+    </script>
+  </body>
+</html>
